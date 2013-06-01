@@ -1,1 +1,25 @@
-#TODO: Make a README
+ARC Render Cluster - Master Control Program
+
+1-Introduction
+	The ARC MCP is a program designed to monitor the physical status off the 
+	machines in a compute cluster.  It's mission is to streamline many of the
+	arduous tasks of cluster management, and monitor the cluster collecting
+	useful metrics along the way.
+2-License
+	The MCP is copyright 2013 Andrew Kester and licensed under the GNU General
+	Public License.
+	
+	This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    
+    The full license text is included in the COPYING file.
