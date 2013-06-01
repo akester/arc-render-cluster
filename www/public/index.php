@@ -40,7 +40,7 @@ Released   : 20121013
 					<li><a href="#" accesskey="2">About</a></li>
 					<li><a href="#" accesskey="3">Premium</a></li>
 					<li><a href="#" accesskey="4">Stats</a></li>
-					<li><a href="#" accesskey="5">Log In</a></li>
+					<li><a href="arc/index.php" accesskey="5">Log In</a></li>
 				</ul>
 			</div>
 		</div>
