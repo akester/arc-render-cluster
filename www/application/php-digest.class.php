@@ -76,37 +76,37 @@ class phpAuth {
      * Controls if the script will redirect users when the authentication process is canceled.
      * @var boolean
      */
-    public $redirect_on_failure = FALSE;
+    public $redirect_on_failure = TRUE;
 
     /**
      * The URL to redirect to on a failure.
      * @var string
      */
-    public $redirect_on_failure_url = '';
+    public $redirect_on_failure_url = '/arc/error.php';
 
     /**
      * Text that is echoed if the login fails, but fails to redirect.
      * @var string
      */
-    public $fail_text = '';
+    public $fail_text = 'You Must Login.';
 
     /**
      * Controls if the user is redirected after logging out.
      * @var boolean
      */
-    public $redirect_on_logout = FALSE;
+    public $redirect_on_logout = TRUE;
 
     /**
      * The URL to redirect to on a logout.
      * @var string
      */
-    public $redirect_on_logout_url = '';
+    public $redirect_on_logout_url = '/arc';
 
     /**
      * Text to display if the user logs out but fails to redirect.
      * @var string
      */
-    public $logout_text = 'You have been logged out. <a href="index.html">Return</a>';
+    public $logout_text = 'You have been logged out. <a href="index.php">Return</a>';
 
     /**
      * The wait time in seconds after a failed authentication.
@@ -118,13 +118,13 @@ class phpAuth {
      * If the user fails to login because they failed to pass an IP address, they can be redirected.
      * @var boolean
      */
-    public $redirect_on_ip_fail = FALSE;
+    public $redirect_on_ip_fail = TRUE;
 
     /**
      * The URL to redirect to on a failure due to an IP address.
      * @var string
      */
-    public $redirect_on_ip_fail_url = '';
+    public $redirect_on_ip_fail_url = '/arc/iperror.php';
 
     /**
      * If the user does not redirect on an IP failure, this message is displayed.
@@ -268,7 +268,7 @@ class phpAuth {
      * are stored!
      * @var string
      */
-    private $realm = 'Test';
+    private $realm = 'ARC Render Cluster';
 
     /**
      * Secret key used to encrypt/decrypt the stored hash values.
@@ -278,7 +278,28 @@ class phpAuth {
      * (256+ Random chars from /dev/urandom is a good choice here)
      * @var string
      */
-    private $secret = 'SpnEHX_W8Ija_MoUFPqCFupVADvfz097JuaBewFwJzEKmdEKA6FVznxesxsJHlUYEXgn4icJInK9Qdrm33wiNG7KP4sjIlN0AABDDf2HHkCfVg6nUilldFjNC0iHYerOFulY4NSpU4qyjG0FPq0wloWTy7y2jxHzO33H0JCCA7Xm3dPSWlAmIC1uaTPcXDZsWqYL4j1Y8qs5W3pi9DvRu5DWUqrBWrNfuuYzbMcnOP6B0uaFBDPTxLSUjodkI1c1';
+    private $secret = '	bkbys5ZtCQXfqD+fZS44De+5WZUf7ZweZwE5QJvelpgSCHgjEk5SjoU7yqUCYeHJ
+						0t1ehdXP7EosIqXyTbhov7NDzXnYs/77VTMHOa9RMW6Kz8gzgyBU3gUrt6wdl7Nu
+						sS20kaR99u+vp4Mt98cEVcFLAVUuL+5l4IZmnFGXTsFSop/6DfI7D+e7BVVIvjCq
+						jvXgCRstxWbzmtlHRfZzHjjjvXJnrnZGoZHvfGPEWroEGvc5+PdNbcw4L/Ao1HPC
+						03IiwXNVe67ztwSZUKCWeQ5zbil3s/RRYqDBlBCcvnbDYQvjnj3EYwfgNgK0O0tb
+						l10U9J26814W38L+K6deTO9yF6IHFsvRc+Edrhy4VklI1Vq97fQJ0cDIb3ODMQYO
+						4uUUAzwH/7NaGlFuXyj2wzts6siKqSeENei+CKAGRX1x/b5yRs7zdIaC9+M+zk38
+						OEu8dtPPXif9hxEnJ8tXhUNHTCeSe0s518ngAQS1te+SdAlhvEseuAOLB99+Ha1l
+						D7J+QKMBPVSG7w1TOUPm3UNNLyFRpsBm3O74BBNJ1+sOiLz8ra7gl9XjFi2K1yaD
+						Kjs2OkFLclHumsapqRkTknvZVH6y6tn4D/Tojg+a+muwkaRZohmwg5usJ3Dcj7Sd
+						36CBadZom4/S1uviFhfxS4mj/HK2QyjpxXNWtwsV9NQI6v1R1fbEi3SVNR/PMs/O
+						5DxU3SbU7gxDzomIGkRlM1VCzRoa3WuDTb+2k+TVE5ZoJcFGZtkJ6YbEtEgMiMNK
+						/reR73+G7bQbBodFZo5ZVq3lCPG3Tc57TH64u56bD/lSBIoVW2PgGXDw0cUK1p9B
+						Z+ldB9TIV+oXr8b0Xes35p0OCdKTN5Qqg+kDU6ZsYMOaLOcE9ue12Ao+pu+qntYU
+						Wdrcd0nyUxeLV4hIXSE8XSkTZuNfiS/Lh6fXQEno97NYF+PxMynJTqveTaAD7Kj1
+						0rnWtc/WFO37CCz5Cy+X52zay/9dwQVOe8smsF3nGv1TcFBJImsR57jJY2MptS56
+						7KRR9NBSgzlZ7mWEygrFn4hyLD04sDcmMX1DXmqPtA7Z9NAXs0XIQ/Kv/zOgtvhZ
+						tlhhf1KBeKPERxGabtIiBcq/sNRIkZUxbUHXBRt3Oo2k6ipLuAAKaNgJNIdXZMxd
+						ezTIRMRsBL4t6B36UDKn6KGgdJ1RnaPTHf5XGc/Mdgu2Fwddewo3x4u/HRD3uol+
+						zm3jzY7ng8rrIQspww19bC/f9Y4YoOUZpWvxMGvuq4CwY2jV31fhYBGPPIAdBh/F
+						edbga7G2y8VPiHBIV7BdtcU2qYT8uYSLC9SlY5xfVPuI38dfEIC9P5kQQkqgm9J3
+						hw6iyFRQy8gcunENzrcwJtC25ZU=';
 
     /**
      * Verifing nonce values is more secure, but it can add to the load on
@@ -299,7 +320,7 @@ class phpAuth {
      * it would lock them out.)
      * @var boolean
      */
-    private $require_ip = FALSE;
+    private $require_ip = TRUE;
 
     /*     * ************************************************************************* *
      *                      END CONFIGURATION!

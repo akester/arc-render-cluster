@@ -17,25 +17,25 @@ class phpAuthMySQL extends phpAuth {
      * The user for the authentication MySQL Server
      * @var string
      */
-    private $db_auth_user = 'rtm_user';
+    private $db_auth_user = 'arc';
 
     /**
      * The password for the authentication MySQL Server
      * @var string
      */
-    private $db_auth_pass = 'ZYRsmYDVABYeeTaD';
+    private $db_auth_pass = 'arc';
 
     /**
      * The database for the authentication MySQL Server
      * @var string
      */
-    private $db_auth_data = 'rtm';
+    private $db_auth_data = 'arc';
 
     /**
      * The user table
      * @var string
      */
-    private $db_user_table = 'auth_users';
+    private $db_user_table = 'arc_users';
 
     /*
      * This information is used to connect to the backend database 
@@ -51,31 +51,31 @@ class phpAuthMySQL extends phpAuth {
      * The username for the backend MySQL Server
      * @var string
      */
-    private $db_back_user = 'rtm_user';
+    private $db_back_user = 'arc';
 
     /**
      * The password for the backend MySQL Server
      * @var string
      */
-    private $db_back_pass = 'ZYRsmYDVABYeeTaD';
+    private $db_back_pass = 'arc';
 
     /**
      * The database to use for the backend MySQL Server
      * @var string
      */
-    private $db_back_data = 'rtm';
+    private $db_back_data = 'arc';
 
     /**
      * The nonce table in the database.
      * @var string
      */
-    private $db_nonce_table = 'auth_nonce';
+    private $db_nonce_table = 'arc_nonce';
 
     /**
      * The log table in the database
      * @var string
      */
-    private $db_log_table = 'auth_log';
+    private $db_log_table = 'arc_log';
 
     function __construct() {
 
