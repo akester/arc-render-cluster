@@ -53,7 +53,7 @@ class phpAuth {
      * Turns on debugging during execution.
      * @var boolean
      */
-    private $debug = TRUE;
+    private $debug = FALSE;
 
     /**
      * Controls if the script will quit on an error or try to pass it to an exterior error handler.
