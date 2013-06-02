@@ -58,8 +58,9 @@ Released   : 20121013
 					ARC is a render cluster that is free to use by any 3D
 					artist.  Our goal is to provide free, high power computing
 					resources to artits anywhere.  We currently support Blender
-					and LuxRender.
+					with plans to support LuxRender.
 				</p>
+				<p><center><b>Spangly Donate Button</b></center></p>
 				<p>&nbsp;</p>
 				<ul class="style2">
 					<li class="first"><a href="#">Services We Offer</a></li>
