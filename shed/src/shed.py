@@ -2,11 +2,15 @@
 
 import ConfigParser
 import errno
+import paramiko
 import sys
 
 class shed():
     # System Specific Settings
-    configFileLocation= 'cfg/shed.conf'
+    configFileLocation= '../cfg/shed.conf'
+    
+    def __init__(self):
+        self.config = self.parseConfig()
 
     def parseConfig(self):
         # Read the configuration file
