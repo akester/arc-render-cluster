@@ -4,7 +4,7 @@ import ConfigParser
 import errno
 import sys
 
-class shed ():
+class shed():
     # System Specific Settings
     configFileLocation= 'cfg/shed.conf'
 
