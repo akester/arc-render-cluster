@@ -3,6 +3,7 @@
 import sys
 sys.path.append('/home/andrew/projects/arc-render-cluster/shed/src')
 
+import MySQLdb
 import shed
 import unittest
 
@@ -21,6 +22,11 @@ class shed_MainFunctions(unittest.TestCase):
     
     def testLibrary(self):
         self.assertIsInstance(self.s, shed.shed)
+        
+    def testMySQL(self):
+        self.s.connectMySQL()
+        self.assertIsInstance(self.s.db, MySQLdb.cursors.Cursor)
+        self.s.closeMySQL()
         
         
 # Begin Testing

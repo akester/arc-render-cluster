@@ -2,6 +2,7 @@
 
 import ConfigParser
 import errno
+import MySQLdb
 import paramiko
 import sys
 
@@ -31,6 +32,17 @@ class shed():
                 out[section][option] = config.get(section, option)
 
         return out
+
+    def connectMySQL(self):
+        self.con = MySQLdb.connect(self.config['mysql']['host'],
+                              self.config['mysql']['username'],
+                              self.config['mysql']['password'],
+                              self.config['mysql']['database'])
+        self.db = self.con.cursor()
+        return True
+
+    def closeMySQL(self):
+        self.con.close()
 
     def sshConnect(self, host):
         client = paramiko.SSHClient()
