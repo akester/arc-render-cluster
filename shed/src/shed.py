@@ -34,14 +34,16 @@ class shed():
 
     def sshConnect(self, host):
         client = paramiko.SSHClient()
+
+        client.set_missing_host_key_policy(paramiko.WarningPolicy())
         client.load_system_host_keys()
-        client.set_missing_host_key_policy(paramiko.RejectPolicy)
 
         if not self.config[host]['address']:
             raise KeyError('E: Missing address for host {0}'.format(host))
 
         client.connect(self.config[host]['address'],
-                       username=self.config[host]['user'])
+                       username=self.config[host]['user'],
+                       key_filename=self.config[host]['keyfile'])
 
         return client
 
@@ -54,7 +56,7 @@ class shed():
 
         self.sshClose(client)
 
-        if stderr.read != "":
+        if stderr.read() != "":
             raise RuntimeError('E: SSH Command returned data on stderr: {0}'
                                .format(stderr.read()))
         return stdout.read()
