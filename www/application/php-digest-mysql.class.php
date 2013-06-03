@@ -196,7 +196,7 @@ class phpAuthMySQL extends phpAuth {
         $thetime = time();
         $exptime = $thetime + $this->nonce_expire;
 
-        $getQuery = "SELECT * FROM `{$this->db_back_data}`.`{$this->db_nonce_table}` WHERE `nonce` = '$nonce' AND `nc` < $nc";
+        $getQuery = "SELECT * FROM `{$this->db_back_data}`.`{$this->db_nonce_table}` WHERE `nonce` LIKE '$nonce' AND `nc` < $nc";
         $result = $this->backdb->query($getQuery)
                 or callError("Error: Cannot get nonce data!! MySQL Returned: " . $this->backdb->error);
         if ($result->num_rows != 1) {
