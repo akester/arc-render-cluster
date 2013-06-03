@@ -51,3 +51,10 @@ class shed():
     def sshCommand(self, host, command):
         client = self.sshConnect(host)
         stdin, stdout, stderr = client.exec_command(command)
+
+        self.sshClose(client)
+
+        if stderr.read != "":
+            raise RuntimeError('E: SSH Command returned data on stderr: {0}'
+                               .format(stderr.read()))
+        return stdout.read()
