@@ -11,7 +11,9 @@ class shed_SSHFunctions(unittest.TestCase):
         self.s = shed.shed()
         
     def testSSHConnection(self):
-        self.s.sshCommand('render-01', 'uname -a')
+        result = self.s.sshCommand('render-01', 'uname -a')
+        uname = "Linux render-01 3.2.0-4-amd64 #1 SMP Debian 3.2.41-2+deb7u2 x86_64 GNU/Linux\n"
+        self.assertEqual(result, uname)
         
 class shed_MainFunctions(unittest.TestCase):
     def setUp(self):
