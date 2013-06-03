@@ -31,3 +31,23 @@ class shed():
                 out[section][option] = config.get(section, option)
 
         return out
+
+    def sshConnect(self, host):
+        client = paramiko.SSHClient()
+        client.load_system_host_keys()
+        client.set_missing_host_key_policy(paramiko.RejectPolicy)
+
+        if not self.config[host]['address']:
+            raise KeyError('E: Missing address for host {0}'.format(host))
+
+        client.connect(self.config[host]['address'],
+                       username=self.config[host]['user'])
+
+        return client
+
+    def sshClose(self, client):
+        client.close()
+
+    def sshCommand(self, host, command):
+        client = self.sshConnect(host)
+        stdin, stdout, stderr = client.exec_command(command)
