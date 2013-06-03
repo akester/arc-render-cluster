@@ -76,3 +76,8 @@ class shed():
                                .format(stderrStr))
             
         return stdoutStr
+    
+    def getJobs(self, status=0):
+        self.db.execute("SELECT * FROM `arc_jobs` WHERE `status` = {0}"
+                        .format(status))
+        return self.db.fetchall()

@@ -28,6 +28,19 @@ class shed_MainFunctions(unittest.TestCase):
         self.assertIsInstance(self.s.db, MySQLdb.cursors.Cursor)
         self.s.closeMySQL()
         
+class shed_DBFunctions(unittest.TestCase):
+    def setUp(self):
+        self.s = shed.shed()
+    
+    def testConnection(self):
+        self.s.connectMySQL()
+        self.assertIsInstance(self.s.db, MySQLdb.cursors.Cursor)
+        self.s.closeMySQL()
+    
+    def testFetchJobs(self):
+        self.s.connectMySQL()
+        print self.s.getJobs(0)
+        self.s.closeMySQL()
         
 # Begin Testing
 if __name__ == '__main__':
