@@ -44,7 +44,7 @@ Released   : 20121013
 					</li>
 					<li><a href="#" accesskey="2">Files</a></li>
 					<li><a href="#" accesskey="3">Account</a></li>
-					<li><a href="#" accesskey="4">Premium</a></li>
+					<li><a href="#" accesskey="4">Donate</a></li>
 					<li><a href="#" accesskey="5">Stats</a></li>
 				</ul>
 			</div>
@@ -99,18 +99,13 @@ Released   : 20121013
 		<div id="page">
 			<div id="content">
 				<div>
-					<h2>Premium Access</h2>
+					<h2>Donate</h2>
 					<p>
-						Need your renders even faster?  With Premium Access your
-						jobs are sent ahead in the line.  Not only are you
-						helping to financially support ARC, you also cut your
-						wait time.  With ARC, you <b>only pay for frames that you
-						render.</b>
-					</p>
-					<p>
-						With group options, volume discounts, pay as you go
-						pricing, and numerous other features; ARC's difference
-						is clear!
+						Operating this cluster does incur cost.  If you have
+						found this cluster useful, please consider supporting it
+						financially with either a one-time or a recurring
+						contribution.  Your contributions allow us to continue
+						to provide this service to artists everywhere.
 					</p>
 					<p class="button-style"><a href="#">More Details</a></p>
 				</div>
