@@ -1,0 +1,36 @@
+/* CSS Information for PHP-Browser.  Feel free to modify these to match your site.
+ * Copyright 2013 Andrew Kester, released under GNU-GPLv3
+ */
+ #pbr-table {
+     padding: 4px;
+ }
+th{
+     background-color: #999999;
+ }
+ #pbr-count {
+     
+ }
+ tr.pbr-odd {
+     background-color: #eeeeee;
+ }
+ tr.pbr-even {
+     background-color: #cccccc;
+ }
+ #pbr-icon {
+     padding: 3px;
+ }
+ #pbr-name {
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+ }
+ #pbr-size {
+     padding: 3px;
+     padding-left: 7px;
+     padding-right: 7px;
+ }
+ #pbr-type {
+     padding: 3px;
+     padding-left: 7px;
+     padding-right: 7px;
+ }
