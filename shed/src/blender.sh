@@ -34,7 +34,7 @@ while [ $x -le $endf ]; do
 #PBS -N blender-render-frame
 #PBS -l nodes=1:ppn=1
 
-blender -b $infile -x 1 -o //out -F JPEG -s $x -e $x -a
+blender -b $infile -t 1 -x 1 -o //out -F JPEG -s $x -e $x -a
 EOS
 	x=`expr $x + 1`
 done
