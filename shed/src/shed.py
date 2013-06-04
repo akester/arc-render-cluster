@@ -81,3 +81,15 @@ class shed():
         self.db.execute("SELECT * FROM `arc_jobs` WHERE `status` = {0}"
                         .format(status))
         return self.db.fetchall()
+    
+    def setJobStatus(self, job, status):
+        self.db.execute("UPDATE `arc_jobs` SET `status` = {0} WHERE `jobId` = {1}"
+                        .format(status, job))
+    
+    def storeChunk(self, job, x, node):
+        self.db.execute("SELECT * FROM `arc_jobs` WHERE `jobId` = {0}"
+                        .format(job))
+        job = self.db.fetchone()
+        
+        self.db.execute("INSERT INTO `arc_chunks` VALUES(NULL, {0}, {1}, NULL," +
+        "{2}, {3}")
