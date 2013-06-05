@@ -1,0 +1,42 @@
+Job Id: 3258.render-00
+    Job_Name = blender-render-frame
+    Job_Owner = andrew@render-00
+    resources_used.cput = 00:00:19
+    resources_used.mem = 127864kb
+    resources_used.vmem = 452008kb
+    resources_used.walltime = 00:00:54
+    job_state = C
+    queue = batch
+    server = render-00
+    Checkpoint = u
+    ctime = Tue Jun  4 12:14:16 2013
+    Error_Path = render-00:/home/andrew/blender-render-frame.e3258
+    exec_host = render-01/0
+    Hold_Types = n
+    Join_Path = n
+    Keep_Files = n
+    Mail_Points = a
+    mtime = Tue Jun  4 12:15:10 2013
+    Output_Path = render-00:/home/andrew/blender-render-frame.o3258
+    Priority = 0
+    qtime = Tue Jun  4 12:14:16 2013
+    Rerunable = True
+    Resource_List.nodect = 1
+    Resource_List.nodes = 1:ppn=1
+    Resource_List.walltime = 01:00:00
+    session_id = 2835
+    Variable_List = PBS_O_QUEUE=batch,PBS_O_HOST=render-00,
+	PBS_O_HOME=/home/andrew,PBS_O_LANG=en_US.UTF-8,PBS_O_LOGNAME=andrew,
+	PBS_O_PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games,
+	PBS_O_MAIL=/var/mail/andrew,PBS_O_SHELL=/bin/bash,
+	PBS_SERVER=render-00,PBS_O_WORKDIR=/home/andrew
+    comment = Job started on Tue Jun 04 at 12:14
+    etime = Tue Jun  4 12:14:16 2013
+    exit_status = 0
+    submit_args = -
+    start_time = Tue Jun  4 12:14:16 2013
+    Walltime.Remaining = 3545
+    start_count = 1
+    fault_tolerant = False
+    comp_time = Tue Jun  4 12:15:11 2013
+
